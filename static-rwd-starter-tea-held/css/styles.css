@@ -3,6 +3,7 @@
 /* modern-normalize is taking care of the box-sizing,
    which is still a standard way to design */
 
+
 /* * * * * * * * * * * * * * * * * * * * * * * * *
     UTILITIES 
 * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -23,89 +24,43 @@ img {
     max-inline-size: 100%;
 }
 
+:root {
+ --primary-green: #419358;
+ --secondary-blue: #6ca2d4;
+ --grey: rgb(237, 235, 235);
+ --black: rgb(69, 56, 43);
+}
+
 /* * * * * * * * * * * * * * * * * * * * * * * * *
     TYPOGRAPHY 
     For larger projects, consider using a type scale:
     https://baseline.is/tools/type-scale-generator/
 * * * * * * * * * * * * * * * * * * * * * * * * */
 
-h1, h2 {
-    text-align: center;
+header h1 {
+    margin: 0;
+    padding: 3rem 1rem 5rem;
 }
 
-h2 {
+.fancy {
     font-weight: 300;
-}
-
-
-/* * * * * * * * * * * * * * * * * * * * * * * * *
-    ANIMATIONS
-* * * * * * * * * * * * * * * * * * * * * * * * */
-
-/* Animated gradient background by Manuel Pinto */
-/* https://codepen.io/P1N2O/pen/pyBNzX */
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+    font-style: italic;
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * *
     STRUCTURE
 * * * * * * * * * * * * * * * * * * * * * * * * */
 
-body {
-    background: linear-gradient(-45deg, #000000, #320e54, #23a6d5, #000000);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-	height: 100vh;
-    color: white;
-    font-family: "Manrope", sans-serif;
-}
-
 .container {
-    max-width: 350px;
-    margin: 0 auto;
-    position: relative;
-}
-
-
-
-
-/* * * * * * * * * * * * * * * * * * * * * * * * *
-    NAVIGATION
-* * * * * * * * * * * * * * * * * * * * * * * * */
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    margin: 1rem 1rem 5rem;
-}
-
-
-nav ul {
-    margin: 0;
-    list-style-type: none;
-}
-
-nav a {
-    text-decoration: none;
-    cursor: pointer;
-    color: white;
-    margin: 0 1rem;
+    width: 88%;
+    margin: 6rem auto;
 }
 
 footer {
     background-color: black;
-    color: white;
     text-align: center;
-    padding: 50px;
+    color: white;
+    margin: 0;
 }
 
 
@@ -117,25 +72,34 @@ footer {
     IMAGES
 */
 
-.ring-img {
-    max-width: 700px;
-    margin: 0 auto;
-    position: absolute;
-    top: 25px;
-    left: 0;
+/* 
+    LINKS AND BUTTONS
+*/
+
+
+.button {
+    background-color: var(--primary-green);
+    border: 3px solid var(--secondary-blue);
+    border-radius: 0.5rem;
+    color: white;
+    padding: 0.5em 1.0em;
+    margin: 1.0em 2.0em 0 0;
+    display: inline-block;
+    font-size: 18px;
+    letter-spacing: 1px;
+    transition: background-color .2s ease-out, color .2s ease-out, border-color .18s ease-out;
 }
 
+.button:hover {
+    background-color: transparent;
+    color: var(--primary-green);
+}
 
-
-
-/* 
-    LINKS
-*/
-
-
-/* 
-    BUTTONS
-*/
+a:link,
+a:visited {
+    text-decoration: none;
+    font-weight: bold;
+}
 
 /* 
     TABLES
@@ -145,70 +109,157 @@ footer {
     PAGE SPECIFIC
 * * * * * * * * * * * * * * * * * * * * * * * * */
 
-.stats {
-    margin: 0 auto;
-}
-
-.stats ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+header {
+    background-color: var(--secondary-blue);
     margin: 0;
-    list-style-type: none;
-}
-
-.stats li {
-    border: 2px solid white;
-    padding: 20px;
-    width: 200px;
-    text-align: center;
-    margin: 15px;
-    font-weight: 600;
-}
-
-.intro {
-    height: 700px;
+    color: white;
+    padding: 0;
     position: relative;
-}
-
-.intro h2 {
-    position: absolute;
-    bottom: 150px;
-    left: -45px;
-    text-align: start;
-    max-width: 250px;
+    z-index: -100;
 }
 
 
 
 /* * * * * * * * * * * * * * * * * * * * * * * * *
-    MEDIA QUERIES 
+    NAVIGATION
 * * * * * * * * * * * * * * * * * * * * * * * * */
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 500,
+        'GRAD' 0,
+        'opsz' 48
+}
 
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10000;
+    /* Use JS to adjust width to see panel */
+    height: 100%;
+    width: 0;
+    /* Overflow disables auto horizontal scroll */
+    overflow-x: hidden;
+    padding-top: 4rem;
+    transition: 0.5s;
+    background-color: white;
+    & a {
+        display: block;
+        padding: 0.5rem 0.5rem 0.5rem 2rem;
+        font-size: var(--text-size-lg);
+        text-decoration: none;
+        transition: 0.3s;
+        color: black;
+
+        &:hover {
+            color: grey;
+        }
+    }
+}
+
+.open-button {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+
+    & span {
+        font-size: var(--text-size-3xl);
+        color: white;
+        text-shadow: 1px 1px 1px black;
+    }
+
+    &:hover {
+        color: var(--grey);
+        cursor: pointer;
+    }
+}
+
+.close-button {
+    position: absolute;
+    top: 0;
+    right: 1.5rem;
+    font-size: var(--text-size-4xl);
+    margin-left: 3rem;
+}
+
+.all-over-bkg {
+    display: none;
+}
+
+.is-visible {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    min-height: 100%;
+    min-width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+main {
+    margin: 0;
+    transition: margin-right .5s;
+}
+.is-pushed-over {
+    margin-right: 300px;
+    transition: margin-right .5s;
+    padding: 0;
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * *
+     MEDIA QUERIES
+* * * * * * * * * * * * * * * * * * * * * * * * */
 /* X-Small devices (portrait phones, less than 576px) */
 /* No media query for `xs` since this is the default */
 
 /* Small devices (landscape phones, 576px and up) */
-@media (width >=576px) {}
+@media (width >=576px) {
+
+}
 
 /* Medium devices (tablets, 768px and up) */
 @media (width >=768px) {
-    .container {
-    max-width: 750px;
-    margin: 0 auto;
-    }
 
-    .stats ul {
-    flex-direction: row;
-    justify-content: space-evenly;
+    nav ul {
+        align-items: flex-start;
+    }
+    .container {
+        width: 64%;
     }
 }
 
+
 /* Large devices (desktops, 992px and up) */
-@media (width >=992px) {}
+@media (width >=992px) {
+
+}
 
 /* X-Large devices (large desktops, 1200px and up) */
-@media (width >=1200px) {}
+@media (width >=1200px) {
+
+
+}
 
 /* XX-Large devices (larger desktops, 1400px and up) */
-@media (width >=1400px) {}
+@media (width >=1400px) {
+
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * *
+    JS
+* * * * * * * * * * * * * * * * * * * * * * * * */
+#map { height: 180px; }
