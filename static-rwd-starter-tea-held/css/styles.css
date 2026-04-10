@@ -25,26 +25,86 @@ img {
 }
 
 :root {
- --primary-green: #419358;
- --secondary-blue: #6ca2d4;
+ --primary: #419358;
+ --secondary: #6ca2d4;
+ --secondary-lighter: #7cb8f0;
  --grey: rgb(237, 235, 235);
  --black: rgb(69, 56, 43);
-}
 
+  --text-size-xs: 0.79rem;
+  --text-size-sm: 0.89rem;
+  --text-size-md: 1rem;
+  --text-size-lg: 1.13rem;
+  --text-size-xl: 1.27rem;
+  --text-size-2xl: 1.42rem;
+  --text-size-3xl: 1.6rem;
+  --text-size-4xl: 1.8rem;
+  --text-size-5xl: 2.03rem;
+}
 /* * * * * * * * * * * * * * * * * * * * * * * * *
     TYPOGRAPHY 
-    For larger projects, consider using a type scale:
-    https://baseline.is/tools/type-scale-generator/
 * * * * * * * * * * * * * * * * * * * * * * * * */
+html {font-size: 16px;}
 
-header h1 {
-    margin: 0;
-    padding: 3rem 1rem 5rem;
+body {
+  font-weight: false;
+  line-height: 1.65;
+  font-family: "Outfit", sans-serif;
 }
 
-.fancy {
-    font-weight: 300;
-    font-style: italic;
+p {
+  font-size: var(--text-size-md);
+  padding: 5px 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Outfit", sans-serif;
+  font-weight: true;
+  line-height: 1.15;
+}
+
+h1,
+.text-size-h1 {
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+  margin-top: 0;
+  font-size: var(--text-size-4xl);
+  text-align: center;
+}
+
+h2,
+.text-size-h2 { font-size: var(--text-size-3xl); text-align: center; }
+
+h3,
+.text-size-h3 { font-size: var(--text-size-2xl); }
+
+h4,
+.text-size-h4 { font-size: var(--text-size-xl); }
+
+h5,
+.text-size-h5 { font-size: var(--text-size-lg); }
+
+
+small,
+.text-small {
+  font-size: var(--text-size-xs);
+}
+
+header {
+    height: 400px;
+    text-align: center;
+}
+
+header h1{
+    padding: 8rem 0 2rem;
+}
+
+main {
+    font-family: "Outfit", sans-serif;
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * *
@@ -59,9 +119,17 @@ header h1 {
 footer {
     background-color: black;
     text-align: center;
+    padding-top: 4rem;
     color: white;
     margin: 0;
+    height: 200px;
 }
+
+
+.secondary-text {
+    color: var(--secondary);
+}
+
 
 
 /* * * * * * * * * * * * * * * * * * * * * * * * *
@@ -76,10 +144,21 @@ footer {
     LINKS AND BUTTONS
 */
 
+footer a:any-link {
+    color: var(--secondary);
+    font-weight: 600;
+    transition: color 0.7s ease;
+}
 
-.button {
-    background-color: var(--primary-green);
-    border: 3px solid var(--secondary-blue);
+footer a:hover {
+    color: white;
+}
+
+
+
+button {
+    background-color: var(--secondary);
+    border: none;
     border-radius: 0.5rem;
     color: white;
     padding: 0.5em 1.0em;
@@ -87,12 +166,12 @@ footer {
     display: inline-block;
     font-size: 18px;
     letter-spacing: 1px;
-    transition: background-color .2s ease-out, color .2s ease-out, border-color .18s ease-out;
+    transition: all .2s ease-out, color .2s ease-out, border-color .18s ease-out;
 }
 
-.button:hover {
-    background-color: transparent;
-    color: var(--primary-green);
+button:hover {
+    background-color: var(--secondary-lighter);
+    transform: scale(1.05);
 }
 
 a:link,
@@ -100,6 +179,7 @@ a:visited {
     text-decoration: none;
     font-weight: bold;
 }
+
 
 /* 
     TABLES
@@ -110,7 +190,7 @@ a:visited {
 * * * * * * * * * * * * * * * * * * * * * * * * */
 
 header {
-    background-color: var(--secondary-blue);
+    background-color: var(--secondary);
     margin: 0;
     color: white;
     padding: 0;
@@ -118,18 +198,17 @@ header {
     z-index: -100;
 }
 
+.book-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
 
 /* * * * * * * * * * * * * * * * * * * * * * * * *
     NAVIGATION
 * * * * * * * * * * * * * * * * * * * * * * * * */
-.material-symbols-outlined {
-    font-variation-settings:
-        'FILL' 0,
-        'wght' 500,
-        'GRAD' 0,
-        'opsz' 48
-}
+
 
 nav ul {
     margin: 0;
@@ -165,7 +244,7 @@ nav {
         color: black;
 
         &:hover {
-            color: grey;
+            color: var(--secondary);
         }
     }
 }
@@ -178,7 +257,6 @@ nav {
     & span {
         font-size: var(--text-size-3xl);
         color: white;
-        text-shadow: 1px 1px 1px black;
     }
 
     &:hover {
@@ -193,6 +271,8 @@ nav {
     right: 1.5rem;
     font-size: var(--text-size-4xl);
     margin-left: 3rem;
+    color: black;
+    cursor: pointer;
 }
 
 .all-over-bkg {
@@ -233,6 +313,19 @@ main {
 
 /* Medium devices (tablets, 768px and up) */
 @media (width >=768px) {
+
+    /* minor third */
+    :root {
+        --text-size-xs: 0.69rem;
+        --text-size-sm: 0.83rem;
+        --text-size-md: 1rem;
+        --text-size-lg: 1.2rem;
+        --text-size-xl: 1.44rem;
+        --text-size-2xl: 1.73rem;
+        --text-size-3xl: 2.07rem;
+        --text-size-4xl: 2.49rem;
+        --text-size-5xl: 2.99rem;
+    }
 
     nav ul {
         align-items: flex-start;
