@@ -107,6 +107,14 @@ main {
     font-family: "Outfit", sans-serif;
 }
 
+.quote {
+    font-style: italic;
+}
+.quote::before,.quote:after{
+    content: "'";
+}
+
+
 /* * * * * * * * * * * * * * * * * * * * * * * * *
     STRUCTURE
 * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -200,8 +208,23 @@ header {
 
 .book-box {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    margin-bottom: 4rem;
+}
+
+.text-box {
+    width: 60%;
+
+}
+
+.text-box h3 {
+    padding: 0;
+    margin: 0;
+}
+
+.book-box img {
+    height: 300px;
+    width: auto;
 }
 
 
