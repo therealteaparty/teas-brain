@@ -1,46 +1,22 @@
-a new tech company for bioparts
+        <p>As a baby child, I was born in Tampa, Florida. For the next few years, I moved around with my cool dad who played baseball and my beautiful mom until we finally settled in Indiana.
+            I loved making lemonade stands, collecting &lpar;and eventually releasing&rpar; lizards, playing Tomodachi Life on my 2DS, and songwriting on a guitar that I had no idea how to play.
+        </p>
 
+        <p>In middle school, I went through that phase where I listened to Twenty-One Pilots, wore chokers around my neck, silly bands on my wrists,
+            and styled my hair with side-swept bangs. </p>
+        
+        <p>
+        By high school, I was primarily a show choir kid and a debate club member. On weekends, I would switch between my sparkly dresses
+        and my suits. My mom says I'm really good at arguing because of my studies in Public Forum, which involved affirmative and negative arguments about hypothetical public polices. 
+        While I did earn fine scores, I once lost a round because the judge
+        thought my hair should have been in a ponytail.</p>
+        
+        <p>
+        I loved my time at Indiana University, especially in the Media School and the Fine Arts Department. I&rsquo;m glad that the Informatics
+        degree has such interesting options through it&rsquo;s cognates and specializations.
+        </p>
 
-
-INDEX
-
-
-&rsquo;
-
-At the edge of biology and imagination, a new chapter of human potential is being written. We exist for the moments when medicine no longer only repairs—but enhances, adapts, and evolves with you. Our research-led biotechnology platform is building the foundations for personalized neural augmentations and bespoke physical aesthetics, designed for a future where health, identity, and possibility are no longer fixed concepts.
-Through advanced biocompatible architectures and precision modeling, we are exploring ways the brain can interface with custom augmentations tailored to individual needs—cognitive support, sensory expansion, and restorative enhancements imagined for tomorrow&rsquo;s medicine. Alongside this, our additive cosmetic fabrication program envisions a world where physical customization is as personal as genetics, with features designed to harmonize seamlessly with the human form.
-
-We are opening the door to what comes next. Our upcoming waitlists allow early participants to engage with research updates, ethical frameworks, design explorations, and approval timelines as these technologies move from concept to reality.
-
-Every breakthrough we pursue is grounded in responsibility: stringent safety modeling, transparent clinical pathways, and a commitment to informed consent. Innovation, in our view, must always respect the body it seeks to elevate.
-
-The future of augmentation begins with those willing to imagine it first.
-
-
-ABOUT
-
-Our company was founded on a simple yet radical belief: that human biology is not a limitation, but a platform. Advances in neuroscience, material science, and computational design are revealing possibilities once confined to fiction—and our mission is to explore those possibilities thoughtfully, ethically, and collaboratively.
-We are building a long-term research initiative focused on two domains: neural augmentation technologies intended for future medical and therapeutic use, and cosmetic biofabrication that redefines self-expression beyond conventional boundaries. These programs are not products; they are evolving research pathways informed by specialists across medicine, bioethics, design, and patient advocacy.
-Neural augmentation, as we envision it, is about personalization—not optimization for its own sake. Any future system must align with individual neurobiology, respect cognitive autonomy, and integrate safely over time. Cosmetic biofabrication follows the same principles: customization without compromise, expression without erasing humanity.
-Our waitlist model is intentional. It allows us to engage future participants early, share research milestones openly, and build trust before any clinical implementation is considered. This transparency is foundational to how we operate.
-We are not here to promise transformation overnight. We are here to ask careful questions, test bold ideas, and design a future where augmentation expands choice rather than dictates it.
-Progress, we believe, should feel empowering—not irreversible.
-
-ANOTHER PAGE 
-
-Imagine a future where medical innovation feels personal, not prescribed. Where enhancement is not about becoming more than human—but becoming more yourself. We are shaping that future through exploratory biotechnology focused on custom neural augmentations and personalized physical design.
-Our platform brings together speculative engineering, medical research, and digital fabrication to investigate how the body and technology might one day integrate harmoniously. From conceptual brain‑interface architectures to precision-modeled cosmetic features, every system we explore is designed around individuality, adaptability, and long-term wellbeing.
-Rather than releasing finished procedures, we are opening curated waitlists—spaces for early adopters, researchers, and visionaries to participate in the dialogue that will shape responsible augmentation. Members gain access to research previews, design philosophies, and ethical discussions that guide each step forward.
-We acknowledge the weight of what we are building. Modifying the human body, even for beneficial reasons, demands caution, humility, and transparency. That is why our roadmap prioritizes regulatory alignment, multidisciplinary oversight, and continual reassessment as technology evolves.
-This is not about chasing the extreme. It is about exploring the possible—with care.
-The future of biotech is not coming at you. It is being built with you.
-
-
-
-
-MEET BLANK
-
-
-
-FAQ
-
+            <h3>About me: A very brief summary</h3>
+    <p>
+        I am an artist, a consumer, a collector, and sometimes a cook. I am writing this at 22 years old, which makes me the oldest of two siblings. That also means I&rsquo;m nearing the end of my lifetime as a student. 
+    </p>
