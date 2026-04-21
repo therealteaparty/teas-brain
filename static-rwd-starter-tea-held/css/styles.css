@@ -42,6 +42,10 @@ img {
   --text-size-5xl: 2.03rem;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* * * * * * * * * * * * * * * * * * * * * * * * *
         ANIMATIONS 
 * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -81,7 +85,7 @@ body {
 }
 
 p {
-  font-size: var(--text-size-md);
+  font-size: var(--text-size-lg);
   padding: 5px 0;
 }
 
@@ -149,6 +153,7 @@ main {
 .title-header {
     font-family: "Londrina Outline", sans-serif;
     font-size: 75px;
+    margin-top: 3rem;
 }
 
 .index-title {
@@ -158,6 +163,10 @@ main {
 
 h3 {
     text-align: center;
+}
+
+h2 {
+    margin-top: 4rem;
 }
 
 
@@ -249,6 +258,23 @@ iframe {
     LINKS AND BUTTONS
 */
 
+.back-to-top {
+    margin: 5rem 0;
+    text-align: center;
+}
+
+.back-to-top a {
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--secondary);
+    transition: all 0.3s ease;
+}
+
+.back-to-top a:hover {
+    transform: scale(2);
+    color: var(--secondary-lighter);
+}
+
 
 footer a:any-link {
     color: var(--secondary);
@@ -285,10 +311,18 @@ a:visited {
     font-weight: bold;
 }
 
+.explore-btns {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 1rem -5rem;
+}
+
 .explore-btns button {
     display: block;
     margin: 0 auto;
     margin-bottom: 25px;
+    padding: 3rem;
+    width: 200px;
 }
 
 
@@ -381,26 +415,63 @@ header {
     display: flex;
     justify-content: space-evenly;
     gap: 1rem;
+    background-color: rgb(189, 223, 182);
+    border-radius: 35px;
+    margin: 1rem 0;
 }
-
 
 .gallery {
     display: flex;
     flex-flow: column wrap;
     gap: 3rem;
     align-items: center;
+    margin: 3rem 5rem 5rem;
 }
 
-.gallery a {
-    border: 2px solid var(--secondary);
-    padding: 5px;
-    transition: all 0.5s ease;
+.gallery figure {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 15px;
+    color: black;
+    text-align: center;
+    padding: 2rem 2rem;
+    margin: 0;
 }
 
-.gallery a:hover {
-    border: 2px solid var(--secondary);
-    padding: 5px;
-    transform: translateY(-5px);
+.gallery-img {
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+
+
+.music-card {
+    background-color: rgb(255, 255, 255);
+    padding: 2rem;
+    border-radius: 25px;
+    text-align: center;
+    width: 300px;
+    color: black;
+    margin: 1rem;
+    transition: all 0.7s ease;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.music {
+    margin: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.music-card:hover {
+    transform: scaleY(5px);
+    box-shadow: rgba(71, 71, 71, 0.692) 0px 3px 8px;
+    background-color: rgb(240, 240, 240);
+}
+
+.music-card img {
+    width: 100%;
 }
 
 /* * * * * * * * * *
@@ -607,13 +678,25 @@ main {
     .gallery {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    gap: 3rem;
+    justify-content: space-around;
     }
 
 
     .gallery img {
-        max-width: 300px;
+        max-width: 250px;
     }
+
+    .explore-btns {
+    flex-flow: row wrap;
+    }
+
+    .music {
+        display: flex;
+        justify-content: space-around;
+        flex-flow: row wrap;
+    }
+
 
 }
 
