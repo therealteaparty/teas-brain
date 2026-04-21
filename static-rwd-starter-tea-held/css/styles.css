@@ -377,6 +377,32 @@ header {
     height: 25px;
 }
 
+.game-stats {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+
+.gallery {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 3rem;
+    align-items: center;
+}
+
+.gallery a {
+    border: 2px solid var(--secondary);
+    padding: 5px;
+    transition: all 0.5s ease;
+}
+
+.gallery a:hover {
+    border: 2px solid var(--secondary);
+    padding: 5px;
+    transform: translateY(-5px);
+}
+
 /* * * * * * * * * *
 CAROUSEL ANIMATED
  * * * * * * * * * */
@@ -578,7 +604,16 @@ main {
     position: static;
     }
 
+    .gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    }
 
+
+    .gallery img {
+        max-width: 300px;
+    }
 
 }
 
