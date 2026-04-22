@@ -258,6 +258,20 @@ iframe {
     LINKS AND BUTTONS
 */
 
+a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.5s ease;
+}
+
+.a-secondary:hover {
+    color: grey;
+}
+
+a:hover {
+    color: var(--secondary); 
+}
+
 .back-to-top {
     margin: 5rem 0;
     text-align: center;
@@ -449,9 +463,9 @@ header {
     padding: 2rem;
     border-radius: 25px;
     text-align: center;
-    width: 300px;
+    width: 250px;
+    height: 750px;
     color: black;
-    margin: 1rem;
     transition: all 0.7s ease;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -462,6 +476,7 @@ header {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    gap: 15px;
 }
 
 .music-card:hover {
@@ -473,6 +488,18 @@ header {
 .music-card img {
     width: 100%;
 }
+
+.recipe-box {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.recipe-box img {
+    max-width: 250px;
+}
+
+
 
 /* * * * * * * * * *
 CAROUSEL ANIMATED
