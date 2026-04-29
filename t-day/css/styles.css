@@ -169,7 +169,14 @@ h2 {
     margin-top: 4rem;
 }
 
+.text-box p {
+    font-size: 16px;
+}
 
+figcaption {
+    color: var(--secondary);
+    font-size: 15px;
+}
 
 /* * * * * * * * * * * * * * * * * * * * * * * * *
     STRUCTURE
@@ -258,14 +265,23 @@ iframe {
     LINKS AND BUTTONS
 */
 
+.material-symbols-outlined {
+    font-size: 20px;
+}
+
 a {
     text-decoration: none;
     color: black;
     transition: all 0.5s ease;
 }
 
+.a-secondary {
+    color: white;
+    transition: all 0.4s ease;
+}
+
 .a-secondary:hover {
-    color: grey;
+    color: var(--black);
 }
 
 a:hover {
@@ -301,7 +317,6 @@ footer a:hover {
 }
 
 button {
-    background-color: var(--primary);
     border: none;
     border-radius: 1.5rem;
     color: white;
@@ -314,8 +329,8 @@ button {
     cursor: pointer;
 }
 
-button:hover {
-    background-color: var(--secondary-lighter);
+.explore-btns a:hover {
+    background-color: white;
     transform: scale(1.05);
 }
 
@@ -325,19 +340,54 @@ a:visited {
     font-weight: bold;
 }
 
-.explore-btns {
+/* .explore-btns {
     display: flex;
     flex-flow: column nowrap;
     margin: 1rem -5rem;
 }
 
-.explore-btns button {
+.explore-btns a {
     display: block;
     margin: 0 auto;
-    margin-bottom: 25px;
+    margin-bottom: 2rem;
     padding: 3rem;
-    width: 200px;
+    text-align: center;
+    width: 300px;
+    position: relative;
+    color: var(--black);
 }
+
+
+.explore-btns a img {
+    position: absolute;
+    width: 100px;
+    top: -35px;
+    left: -25px;
+} */
+
+.img-link {
+  position: relative;
+  display: block;
+  text-decoration: none;
+}
+
+.img-link img {
+  display: block;
+  transition: transform 0.3s ease;
+  max-width: 350px;
+}
+
+.img-link:hover img {
+  transform: scale(1.05);
+  transform: rotate(3deg);
+}
+
+.right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
 
 
 /* 
@@ -402,9 +452,6 @@ header {
     flex-direction: column-reverse;
 }
 
-.text-box {
-    width: 70%;
-}
 
 .text-box h3 {
     padding: 0;
@@ -421,17 +468,45 @@ header {
 }
 
 .regular-banner {
-    background-color: rgb(115, 149, 162);
+    background-color: var(--black);
     height: 25px;
 }
 
 .game-stats {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     gap: 1rem;
-    background-color: rgb(189, 223, 182);
-    border-radius: 35px;
     margin: 1rem 0;
+}
+
+.game-stats p {
+    border-radius: 35px;
+    padding: 10px;
+    color: white;
+}
+
+.game-stats p:first-child{
+     background-color: #e5e5f7;
+    opacity: 0.8;
+    background-image: linear-gradient(0deg, rgb(46, 59, 36)
+     50%, #21351c 50%);
+    background-size: 5px 5px;
+}
+
+.game-stats p:nth-child(2){
+     background-color: #e5e5f7;
+    opacity: 0.8;
+    background-image: linear-gradient(0deg, rgb(27, 62, 60)
+     50%, #123037 50%);
+    background-size: 5px 5px;
+}
+
+.game-stats p:last-child{
+     background-color: #e5e5f7;
+    opacity: 0.8;
+    background-image: linear-gradient(0deg, rgb(24, 34, 65)
+     50%, #26253b 50%);
+    background-size: 5px 5px;
 }
 
 .gallery {
@@ -458,26 +533,55 @@ header {
 
 
 
+.music-album {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 4rem;
+
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+
+}
+
+.music-album:nth-child(3n+1) {
+    background-image: url("../images/orange-swirl.PNG");
+    background-size: 5px 5px;
+}
+
+.music-album:nth-child(3n+2) {
+    background-image: url("../images/green-swirl.PNG");
+}
+
+.music-album:nth-child(3n+3) {
+    background-image: url("../images/pink-swirl.PNG");
+}
+
+.music-card h2 {
+    margin: 15px 0 0;
+}
+
 .music-card {
     background-color: rgb(255, 255, 255);
     padding: 2rem;
     border-radius: 25px;
-    text-align: center;
-    width: 250px;
-    height: 750px;
     color: black;
     transition: all 0.7s ease;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .music {
-    margin: 0;
+    margin: 6rem 0 0;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 3rem;
 }
+
 
 .music-card:hover {
     transform: scaleY(5px);
@@ -487,16 +591,22 @@ header {
 
 .music-card img {
     width: 100%;
+    border-radius: 25px;
 }
+
 
 .recipe-box {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
+    display: block;
 }
 
-.recipe-box img {
-    max-width: 250px;
+
+.intro-box {
+    display: static;
+}
+
+.intro-box figure {
+    max-width: 300px;
+    margin: 0 auto;
 }
 
 
@@ -641,6 +751,7 @@ main {
     cursor: pointer;
     color: white;
     z-index: 1000;
+    font-size: 20px;
 }
 
 
@@ -676,7 +787,7 @@ main {
         align-items: flex-start;
     }
     .container {
-        width: 55%;
+        width: 65%;
     }
 
         
@@ -692,8 +803,10 @@ main {
     }
 
     .text-box {
-        width: 60%;
+        width: 80%;
+        padding: 15px;
     }
+
     .book-box img {
         width: 250px;
     }
@@ -718,10 +831,36 @@ main {
     flex-flow: row wrap;
     }
 
+
     .music {
         display: flex;
-        justify-content: space-around;
         flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .music-card {
+        color: var(--black);
+        width: 400px;
+    }
+
+    .music-album {
+        flex-direction: row;
+        gap: 4rem;
+        background-position: center;
+    }
+
+    .intro-box {
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+    }
+
+
+    .controller-img {
+    width: 500px;
+    bottom: -200px;
     }
 
 
@@ -730,6 +869,8 @@ main {
 
 /* Large devices (desktops, 992px and up) */
 @media (width >=992px) {
+
+    
 
 }
 
@@ -760,12 +901,22 @@ main {
         bottom: -300px;
     }
 
-    .controller-img {
-    width: 500px;
-    bottom: -200px;
-    
+
+
+.recipe-box {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
 }
 
+.recipe-box img {
+    height: 100%;
+    width: 400px;
+}
+
+.game-stats p {
+    padding: 10px 40px;
+    }
 
 }
 
