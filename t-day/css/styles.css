@@ -190,10 +190,10 @@ figcaption {
 footer {
     background-color: var(--black);
     text-align: center;
-    padding-top: 4rem;
+    padding-top: 1rem;
     color: white;
     margin: 0;
-    height: 200px;
+    height: 100px;
 }
 
 
